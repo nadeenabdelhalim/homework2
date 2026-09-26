@@ -1,0 +1,39 @@
+---
+title: "st 115 homework 2"
+author:
+  - name: Nadeen Abdel-halim
+    affiliation: NC State Univerisity
+format: html
+---
+
+# Packages
+
+## Question 1:
+
+```{r eval = FALSE}
+install.packages("aRtsy")
+```
+
+install.packages is used to install a package onto your device, while library is used to load that package into your current R session for use.
+
+```{r}
+library(aRtsy)
+```
+
+The Collatz sequence is used to take any positive number, divide it by 2 if it is even, or multiply it by 3 and add 1 if it is odd. This process repeats until 1 is reached.
+
+```{r}
+collatz <- function(n){
+  sequence <- c(n)
+  while (n > 1){
+    if (n %% 2 == 0) {
+      n <- n / 2
+    } else {
+      n <- 3*n+1
+    }
+    sequence <- c(sequence, n)
+  }
+  return(sequence)
+}
+
+```
