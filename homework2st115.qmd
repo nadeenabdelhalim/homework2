@@ -64,3 +64,14 @@ canvas_collatz(
   n = 10
 )
 ```
+
+## Question 4
+
+```{r}
+canvas_collatz(
+  colors = c("blue"),
+  n = 1:20
+)
+```
+
+The drawing here looks different because n is set to 1:20 instead of 10. I don't think it's necessary to include set seed here because it starts at 1 and goes to 20 as specified by 1:20.
