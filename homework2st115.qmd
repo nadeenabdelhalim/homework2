@@ -22,6 +22,8 @@ library(aRtsy)
 
 The Collatz sequence is used to take any positive number, divide it by 2 if it is even, or multiply it by 3 and add 1 if it is odd. This process repeats until 1 is reached.
 
+## Question 2
+
 ```{r}
 collatz <- function(n){
   sequence <- c(n)
@@ -36,4 +38,29 @@ collatz <- function(n){
   return(sequence)
 }
 
+```
+
+## Question 3
+
+```{r}
+canvas_collatz(
+  colors = c("blue"),
+  n = 10
+)
+```
+
+This code created a blue drawing/sketch out of the number 10 based on Collatz.
+
+The code produces a different output every time because it selects random starting numbers.
+
+This can be an issue in a Quarto document because it causes reproducibility issues every time you render,
+
+set.seed generates a random number that can be saved used to get the same result every time by setting an exact starting point for every run/render.
+
+```{r}
+set.seed(11)
+canvas_collatz(
+  colors = c("blue"),
+  n = 10
+)
 ```
